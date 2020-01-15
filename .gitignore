@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.log
 *.pot
 *.pyc
@@ -5,3 +6,12 @@ __pychace__/
 local_settings.py
 /media
 /static
+=======
+*.log
+*.pot
+*.pyc
+__pychace__/
+local_settings.py
+/media
+/static
+>>>>>>> f0565804a174833649a03bf1a1375deab090b9db
