@@ -25,7 +25,7 @@ SECRET_KEY = '288%*_oza-gr2!mthcae@4yedjglkxncm9od*67&1d!th%0ff*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sanchh.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'sanhax.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sanchh$sanhaxdb',
-        'USER': 'sanchh',
-        'PASSWORD': 'sanhax1414',
-        'HOST': 'sanchh.mysql.pythonanywhere-services.com',
+        'NAME': 'sanhaxdb',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': 'localhost',
         'PORT': ''
     }
 }
@@ -140,6 +140,6 @@ MEDIA_URL = '/media/'
 
 
 try:
-    from local_settings import *
+    from local_settings import .
 except ImportError:
     pass
