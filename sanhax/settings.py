@@ -25,7 +25,7 @@ SECRET_KEY = '288%*_oza-gr2!mthcae@4yedjglkxncm9od*67&1d!th%0ff*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['sanchh.pythonanywhere.com']
 
 
 # Application definition
@@ -81,10 +81,10 @@ WSGI_APPLICATION = 'sanhax.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sanhaxdb',
-        'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',
+        'NAME': 'sanchh$sanhaxdb',
+        'USER': 'sanchh',
+        'PASSWORD': 'sanhax1414',
+        'HOST': 'sanchh.mysql.pythonanywhere-services.com',
         'PORT': ''
     }
 }
@@ -132,7 +132,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'sanhax/static'),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = 'static'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
