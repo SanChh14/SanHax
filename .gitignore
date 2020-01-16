@@ -10,7 +10,7 @@ local_settings.py
 *.log
 *.pot
 *.pyc
-__pycache__/
+/__pycache__/
 local_settings.py
 /media
 >>>>>>> 5e7754d63d28222f324fcfddd7611fa6ad449938
