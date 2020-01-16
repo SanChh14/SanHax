@@ -2,7 +2,7 @@
 *.log
 *.pot
 *.pyc
-__pychace__/
+__pycache__/
 local_settings.py
 /media
 /static
