@@ -301,12 +301,13 @@ aside{
 }
 
 .search-bar input{
-    display:inline-block;
+    display: inline-block;
     box-sizing: border-box;
-    transition: 0.5s;
 }
 
 .search-text{
+    height:30px;
+    margin-top:0px;
     font-weight: 300;
     width:75%;
     font-size: 1rem;
@@ -315,8 +316,8 @@ aside{
     background: #c5c6c7;
     border-radius: 10px 0px 0 10px;
     border: none;
-    height: 30px;
     outline: none;
+    transition: 0.5s;
 }
 
 .search-text:hover{
@@ -324,24 +325,29 @@ aside{
 }
 
 .search-button{
+    height:30px;
+    width:20%;
+    left:-4.3px;
     position: relative;
     text-align: center;
-    left: -4.3px;
-    width: 20%;
     font-size: 1rem;
     color: #c5c6c7;
     background: #45a29e;
     border-radius: 0px 10px 10px 0px;
     border: none;
-    height: 30px;
     outline: none;
     transition: 0.5s;
+}
+
+#dot{
+    color:rgba(0,0,0,0);
 }
 
 .search-button:hover{
     color: #eee;
     background: rgba(102, 252, 241, 0.8);
 }
+
 
 
 .trendingss{

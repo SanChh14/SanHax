@@ -32,7 +32,7 @@
                 <div class="search-bar">
                     <form action="{%url 'search' %}" method="GET">
                         <input class="search-text" type="text" name="q" placeholder="Search..." value="{{request.GET.q}}"/>
-                        <button class="search-button" type="submit" name="button"><i class="fas fa-search"></i></button>
+                        <button class="search-button" type="submit" name="button"><i class="fas fa-search"></i><span id="dot">.</span></button>
                     </form>
                 </div>
                 <div class="trends">
