@@ -3,7 +3,7 @@
 *.log
 *.pot
 *.pyc
-__pycahce__/
+__pycache__/
 local_settings.py
 /media
 =======
