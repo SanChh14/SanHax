@@ -20,11 +20,13 @@ def appsblog(request):
 
     return render(request, 'appsblog/appsblog.html', {'apps': apps,'trendings':trendings[:10]})
 
-def app_detail(request, appsblog_id):
+def app_detail(request, appsblog_title):
     apps= Appsblog.objects.all()
     games = Gamesblog.objects.all()
     trendings = sorted(chain(apps,games),key=attrgetter('views'),reverse=True)
-    app_detail = get_object_or_404(Appsblog, pk=appsblog_id)
+    ut=appsblog_title.split('-')
+    appsblog_title=' '.join(ut)
+    app_detail = get_object_or_404(Appsblog, title=appsblog_title)
     features= list(app_detail.features.split('\n'))
     install_steps= list(app_detail.install_steps.split('\n'))
     description = list(app_detail.description.split('\n'))

@@ -45,10 +45,10 @@
                     <ul>
                         {% for trending in trendings %}
                             {% if trending.category == 'app' %}
-                                <li><a href="{% url 'app_detail' trending.id %}">{{ trending.title }}</a></li>
+                                <li><a href="{% url 'app_detail' trending.urltitle %}">{{ trending.title }}</a></li>
                             {% endif %}
                             {% if trending.category == 'game' %}
-                                <li><a href="{% url 'game_detail' trending.id %}">{{ trending.title }}</a></li>
+                                <li><a href="{% url 'game_detail' trending.urltitle %}">{{ trending.title }}</a></li>
                             {% endif %}
                         {% endfor %}
                     </ul>
@@ -61,27 +61,27 @@
                         {% for app in all %}
                             <div class="post">
                                 {% if app.category == 'app' %}
-                                    <h3><a href="{% url 'app_detail' app.id %}">{{ app.title }}</a></h3>
+                                    <h3><a href="{% url 'app_detail' app.urltitle %}">{{ app.title }}</a></h3>
                                 {% endif %}
                                 {% if app.category == 'game' %}
-                                    <h3><a href="{% url 'game_detail' app.id %}">{{ app.title }}</a></h3>
+                                    <h3><a href="{% url 'game_detail' app.urltitle %}">{{ app.title }}</a></h3>
                                 {% endif %}
                                 <div class="pub_date">{{ app.pub_date_short }}</div>
                                 <div class="frontimg">
                                     {% if app.category == 'app' %}
-                                        <a href="{% url 'app_detail' app.id %}"><img src="{{ app.image.url }}"></a>
+                                        <a href="{% url 'app_detail' app.urltitle %}"><img src="{{ app.image.url }}"></a>
                                     {% endif %}
                                     {% if app.category == 'game' %}
-                                        <a href="{% url 'game_detail' app.id %}"><img src="{{ app.image.url }}"></a>
+                                        <a href="{% url 'game_detail' app.urltitle %}"><img src="{{ app.image.url }}"></a>
                                     {% endif %}
                                 </div>
                                 <p>
                                     {{ app.summary }}...
                                     {% if app.category == 'app' %}
-                                        <a href="{% url 'app_detail' app.id %}">(Read more)</a>
+                                        <a href="{% url 'app_detail' app.urltitle %}">(Read more)</a>
                                     {% endif %}
                                     {% if app.category == 'game' %}
-                                        <a href="{% url 'game_detail' app.id %}">(Read more)</a>
+                                        <a href="{% url 'game_detail' app.urltitle %}">(Read more)</a>
                                     {% endif %}
                                 </p>
                             </div>

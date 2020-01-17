@@ -25,3 +25,8 @@ class Appsblog(models.Model):
 
     def category(self):
         return 'app'
+
+    def urltitle(self):
+        urltitle=self.title.split(' ')
+        urltitle='-'.join(urltitle)
+        return urltitle

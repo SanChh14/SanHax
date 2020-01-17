@@ -27,3 +27,8 @@ class Gamesblog(models.Model):
 
     def category(self):
         return 'game'
+
+    def urltitle(self):
+        urltitle=self.title.split(' ')
+        urltitle='-'.join(urltitle)
+        return urltitle

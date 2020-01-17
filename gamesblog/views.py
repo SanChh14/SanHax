@@ -16,11 +16,13 @@ def gamesblog(request):
     games = paginator.get_page(page)
     return render(request, 'gamesblog/gamesblog.html', {'games': games,'trendings':trendings[:10]})
 
-def game_detail(request, gamesblog_id):
+def game_detail(request, gamesblog_title):
     apps= Appsblog.objects.all()
     games = Gamesblog.objects.all()
     trendings = sorted(chain(apps,games),key=attrgetter('views'),reverse=True)
-    game_detail = get_object_or_404(Gamesblog, pk=gamesblog_id)
+    ut=gamesblog_title.split('-')
+    gamesblog_title=' '.join(ut)
+    game_detail = get_object_or_404(Gamesblog, pk=gamesblog_title)
     features= list(game_detail.features.split('\n'))
     install_steps= list(game_detail.install_steps.split('\n'))
     description = list(game_detail.description.split('\n'))

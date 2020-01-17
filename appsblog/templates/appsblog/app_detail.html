@@ -45,10 +45,10 @@
                     <ul>
                         {% for trending in trendings %}
                             {% if trending.category == 'app' %}
-                                <li><a href="{% url 'app_detail' trending.id %}">{{ trending.title }}</a></li>
+                                <li><a href="{% url 'app_detail' trending.urltitle %}">{{ trending.title }}</a></li>
                             {% endif %}
                             {% if trending.category == 'game' %}
-                                <li><a href="{% url 'game_detail' trending.id %}">{{ trending.title }}</a></li>
+                                <li><a href="{% url 'game_detail' trending.urltitle %}">{{ trending.title }}</a></li>
                             {% endif %}
                         {% endfor %}
                     </ul>

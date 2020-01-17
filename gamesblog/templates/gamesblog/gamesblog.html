@@ -45,10 +45,10 @@
                     <ul>
                         {% for trending in trendings %}
                             {% if trending.category == 'app' %}
-                                <li><a href="{% url 'app_detail' trending.id %}">{{ trending.title }}</a></li>
+                                <li><a href="{% url 'app_detail' trending.urltitle %}">{{ trending.title }}</a></li>
                             {% endif %}
                             {% if trending.category == 'game' %}
-                                <li><a href="{% url 'game_detail' trending.id %}">{{ trending.title }}</a></li>
+                                <li><a href="{% url 'game_detail' trending.urltitle %}">{{ trending.title }}</a></li>
                             {% endif %}
                         {% endfor %}
                     </ul>
@@ -59,13 +59,13 @@
                 <div id="posts">
                     {% for game in games %}
                         <div class="post">
-                            <h3><a href="{% url 'game_detail' game.id %}">{{ game.title }}</a></h3>
+                            <h3><a href="{% url 'game_detail' game.urltitle %}">{{ game.title }}</a></h3>
                             <div class="pub_date">{{ game.pub_date_short}}</div>
                             <div class="frontimg">
-                                <a href="{% url 'game_detail' game.id %}"><img src="{{ game.image.url }}"></a>
+                                <a href="{% url 'game_detail' game.urltitle %}"><img src="{{ game.image.url }}"></a>
                             </div>
                             <p>
-                                {{ game.summary }}... <a href="{% url 'game_detail' game.id %}">(Read more)</a>
+                                {{ game.summary }}... <a href="{% url 'game_detail' game.urltitle %}">(Read more)</a>
                             </p>
                         </div>
                     {% endfor %}
