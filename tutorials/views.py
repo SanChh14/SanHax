@@ -12,7 +12,7 @@ def tutorials(request):
     apps= Appsblog.objects.all()
     games = Gamesblog.objects.all()
     trendings = sorted(chain(apps,games),key=attrgetter('views'),reverse=True)
-    tutorials = Tutorials.objects.all()
+    tutorials = Tutorials.objects.all().order_by('-pub_date')
     paginator = Paginator(tutorials, 5)
     page = request.GET.get('page')
     tutorials = paginator.get_page(page)
